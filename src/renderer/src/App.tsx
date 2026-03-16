@@ -9,30 +9,29 @@ interface Task {
   text: string;
   completed: boolean;
   createdAt: Date;
+  dueDate?: Date;
 }
 
 function App() {
   const [tasks, setTasks] = useState<Task[]>([]);
 
-  // Add task function
-  const addTask = (text: string) => {
+  const addTask = (text: string, dueDate?: Date) => {
     if (text.trim() !== '') {
       const newTask: Task = {
         id: Date.now(),
         text: text,
         completed: false,
-        createdAt: new Date()
+        createdAt: new Date(),
+        dueDate: dueDate
       };
       setTasks([...tasks, newTask]);
     }
   };
 
-  // Delete task function
   const deleteTask = (id: number) => {
     setTasks(tasks.filter(task => task.id !== id));
   };
 
-  // Toggle completed function
   const toggleTask = (id: number) => {
     setTasks(tasks.map(task => 
       task.id === id ? { ...task, completed: !task.completed } : task
@@ -42,15 +41,12 @@ function App() {
   return (
     <div className="app">
       <h1>My To-Do List</h1>
-      
       <TaskInput onAddTask={addTask} />
-      
       <TaskList 
         tasks={tasks} 
         onToggleTask={toggleTask} 
         onDeleteTask={deleteTask} 
       />
-      
       <TaskStats 
         total={tasks.length} 
         completed={tasks.filter(t => t.completed).length} 

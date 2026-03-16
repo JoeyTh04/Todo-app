@@ -166,3 +166,51 @@ h1 {
   color: #5e3c00;
   font-size: 14px;
 }
+
+/* Date Picker Styles */
+.date-picker-container {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.date-picker {
+  padding: 10px;
+  border: 1px solid #ffd966;
+  border-radius: 6px;
+  font-size: 14px;
+  width: 150px;
+  cursor: pointer;
+}
+
+.date-picker:focus {
+  outline: none;
+  border-color: #b8860b;
+}
+
+/* Task date styles */
+.task-dates {
+  display: flex;
+  flex-direction: column;
+  font-size: 11px;
+  color: #666;
+  margin: 0 10px;
+  min-width: 120px;
+}
+
+.created-date {
+  color: #888;
+}
+
+.due-date {
+  color: #2e7d32;
+  font-weight: 500;
+}
+
+.overdue-text {
+  color: #d32f2f;
+  font-weight: bold;
+}
+
+.task-list li.overdue {
+  border-left: 3px solid #d32f2f;
+}
