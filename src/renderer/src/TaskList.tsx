@@ -16,9 +16,11 @@ interface TaskListProps {
 }
 
 const TaskList: React.FC<TaskListProps> = ({ tasks, onToggleTask, onDeleteTask }) => {
-  const isOverdue = (dueDate?: Date) => {
-    if (!dueDate) return false;
-    return new Date(dueDate) < new Date() && !tasks.find(t => t.id === tasks.find(t2 => t2.id === t.id)?.completed);
+  // Fixed isOverdue function
+  const isOverdue = (task: Task) => {
+    if (!task.dueDate) return false;
+    if (task.completed) return false;
+    return new Date(task.dueDate) < new Date();
   };
 
   if (tasks.length === 0) {
@@ -32,7 +34,7 @@ const TaskList: React.FC<TaskListProps> = ({ tasks, onToggleTask, onDeleteTask }
           key={task.id} 
           className={`
             ${task.completed ? 'completed' : ''} 
-            ${isOverdue(task.dueDate) ? 'overdue' : ''}
+            ${isOverdue(task) ? 'overdue' : ''}
           `}
         >
           <input
@@ -46,7 +48,7 @@ const TaskList: React.FC<TaskListProps> = ({ tasks, onToggleTask, onDeleteTask }
               Created: {format(new Date(task.createdAt), 'MMM d')}
             </span>
             {task.dueDate && (
-              <span className={`due-date ${isOverdue(task.dueDate) ? 'overdue-text' : ''}`}>
+              <span className={`due-date ${isOverdue(task) ? 'overdue-text' : ''}`}>
                 Due: {format(new Date(task.dueDate), 'MMM d, yyyy')}
               </span>
             )}
