@@ -42,7 +42,9 @@ appImage:
   artifactName: ${productName}-${version}.${ext}
 npmRebuild: false
 publish:
-  provider: generic
-  url: https://example.com/auto-updates
+    provider: github
+    owner: JoeyTh04
+    repo: Todo-app
+    releaseType: release
 electronDownload:
   mirror: https://npmmirror.com/mirrors/electron/

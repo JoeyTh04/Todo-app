@@ -149,3 +149,20 @@ h1 {
   color: #5e3c00;
   font-size: 14px;
 }
+
+.task-date {
+  font-size: 12px;
+  color: #888;
+  margin-right: 10px;
+  min-width: 120px;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #ffe6b3;
+  color: #5e3c00;
+  font-size: 14px;
+}
