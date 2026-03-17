@@ -214,3 +214,36 @@ h1 {
 .task-list li.overdue {
   border-left: 3px solid #d32f2f;
 }
+
+.update-notification {
+  background: #e3f2fd;
+  border: 1px solid #2196f3;
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.update-progress {
+  margin-top: 5px;
+}
+
+.progress-bar {
+  height: 10px;
+  background: #e0e0e0;
+  border-radius: 5px;
+  margin-top: 5px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #2196f3;
+  transition: width 0.3s ease;
+}
+
+.update-ready {
+  background: #d4edda;
+  border-color: #28a745;
+  color: #155724;
+}

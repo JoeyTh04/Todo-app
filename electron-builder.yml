@@ -2,6 +2,7 @@ appId: com.electron.app
 productName: Todo
 directories:
   buildResources: build
+  output: dist
 files:
   - '!**/.vscode/*'
   - '!src/*'
@@ -42,7 +43,7 @@ appImage:
   artifactName: ${productName}-${version}.${ext}
 npmRebuild: false
 publish:
-    provider: github
+  - provider: github
     owner: JoeyTh04
     repo: Todo-app
     releaseType: release

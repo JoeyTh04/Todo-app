@@ -28,8 +28,7 @@
     },
     "files": [
       "out/**/*",
-      "electron.vite.config.*",
-      "!node_modules/"
+      "electron.vite.config.*"
     ],
     "win": {
       "icon": "build/icon.ico",
@@ -42,7 +41,7 @@
   },
   "dependencies": {
     "date-fns": "^4.1.0",
-    "electron-updater": "^6.3.9",
+    "electron-updater": "^6.8.3",
     "react-datepicker": "^9.1.0"
   },
   "devDependencies": {
@@ -58,6 +57,7 @@
     "@vitejs/plugin-react": "^5.1.1",
     "electron": "^39.2.6",
     "electron-builder": "^26.0.12",
+    "electron-log": "^5.4.3",
     "electron-vite": "^5.0.0",
     "eslint": "^9.39.1",
     "eslint-plugin-react": "^7.37.5",

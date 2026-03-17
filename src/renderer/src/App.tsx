@@ -2,6 +2,7 @@ import { useState } from 'react';
 import TaskInput from './TaskInput';
 import TaskList from './TaskList';
 import TaskStats from './TaskStats';
+import UpdateNotification from './UpdateNotification'
 import './App.css';
 
 interface Task {
@@ -40,6 +41,7 @@ function App() {
 
   return (
     <div className="app">
+      <UpdateNotification/>
       <h1>My To-Do List</h1>
       <TaskInput onAddTask={addTask} />
       <TaskList 
