@@ -42,7 +42,7 @@ function App() {
   return (
     <div className="app">
       <UpdateNotification/>
-      <h1>My To-Do List</h1>
+      <h1>✅ My To-Do List ✅</h1>
       <TaskInput onAddTask={addTask} />
       <TaskList 
         tasks={tasks} 
