@@ -1,3 +1,7 @@
-provider: generic
-url: https://example.com/auto-updates
-updaterCacheDirName: to-do-updater
+# provider: generic
+# url: https://example.com/auto-updates
+# updaterCacheDirName: to-do-updater
+
+provider: github
+owner: JoeyTh04
+repo: Todo-app
